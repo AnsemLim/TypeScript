@@ -1,10 +1,16 @@
+var Role;
+(function (Role) {
+    Role[Role["ADMIN"] = 0] = "ADMIN";
+    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
+    Role[Role["AUTHOR"] = 2] = "AUTHOR";
+})(Role || (Role = {}));
+;
 var person = {
     name: 'Todd',
     age: 27,
     hobbies: ['Sports', 'Cooking'],
-    role: ['admin', 2] // add the role property here
+    role: Role.ADMIN
 };
-console.log(person.role);
-var favoruteActivities;
-favoruteActivities = ['Sport,Cooking'];
-console.log(person.name + ' ' + person.age + ' ' + person.hobbies + favoruteActivities);
+if (person.role === 0) {
+    console.log('is admin');
+}
