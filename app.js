@@ -25,7 +25,7 @@ var combinedAges = combine(30, 26, 'as-number');
 console.log(combinedAges);
 var combinedStringAges = combine('30', '26', 'as-number');
 console.log(combinedStringAges);
-var combinedName = combine('one', 'two', 'as-string');
+var combinedName = combine('one', 'two', 'as-text');
 console.log(combinedName);
 /* In this case we see that need input number and string and both answer is correct.
     So to add another datatype use | 'union' 'or' */ 
