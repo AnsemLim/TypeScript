@@ -6,3 +6,7 @@ userInput = 'Max';
 if (typeof userInput === 'string') {
     userName = userInput;
 }
+function generationError(message, code) {
+    throw { message: message, errorCode: code };
+}
+generationError('An Error Occurred!', 500); // Error: An Error Occurred!
