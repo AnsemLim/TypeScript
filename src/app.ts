@@ -20,3 +20,13 @@ if (button) {
 }
 
 printOutput(add(5));
+
+//create a spread operator
+const hobbies = ["Sports", "Cooking"];
+const activeHobbies = ["Hiking"];
+
+hobbies.push(...activeHobbies);
+console.log(hobbies); // ["Sports", "Cooking", "Hiking"]
+
+//Make a copy of an array
+const copiedArray = [...hobbies];
