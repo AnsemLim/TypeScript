@@ -8,12 +8,15 @@ if (age > 20) {
 //arrow function
 //const add = () => {};
 //const add = (a: number, b: number) => a + b;// single return
-const add = (a: number, b: number) => {
+const add = (a: number, b: number = 2 ) => { // default value
     return a + b;
 } // return type
 
-const button = document.querySelector("button");
+const printOutput: (a: number | string ) => void = output => console.log(output);
+const button = document.querySelector("button"); 
 
 if (button) {
     button.addEventListener("click", event => console.log(event));
 }
+
+printOutput(add(5));
