@@ -8,18 +8,18 @@ if (age > 20) {
 //arrow function
 //const add = () => {};
 //const add = (a: number, b: number) => a + b;// single return
-const add = (a: number, b: number = 2 ) => { // default value
-    return a + b;
-} // return type
+// const add = (a: number, b: number = 2 ) => { // default value
+//     return a + b;
+// } // return type
 
-const printOutput: (a: number | string ) => void = output => console.log(output);
-const button = document.querySelector("button"); 
+// const printOutput: (a: number | string ) => void = output => console.log(output);
+// const button = document.querySelector("button"); 
 
-if (button) {
-    button.addEventListener("click", event => console.log(event));
-}
+// if (button) {
+//     button.addEventListener("click", event => console.log(event));
+// }
 
-printOutput(add(5));
+// printOutput(add(5));
 
 //create a spread operator
 const hobbies = ["Sports", "Cooking"];
@@ -30,3 +30,12 @@ console.log(hobbies); // ["Sports", "Cooking", "Hiking"]
 
 //Make a copy of an array
 const copiedArray = [...hobbies];
+
+const add = (...number: number[]) => { // rest operator number[] is an array which the add
+    return number.reduce((curResult, curValue) => {
+        return curResult + curValue;
+    }, 0);
+}
+
+const addNumbers = add(5, 10, 2, 3.7);
+console.log(addNumbers);
