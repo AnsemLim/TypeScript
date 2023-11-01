@@ -1,8 +1,8 @@
-let age = 30;
-if (age > 20) {
-    let isOld = true;
-    console.log(isOld); 
-}
+// let age = 30;
+// if (age > 20) {
+//     let isOld = true;
+//     console.log(isOld); 
+// }
 // console.log(isOld); error
 
 //arrow function
@@ -31,6 +31,11 @@ console.log(hobbies); // ["Sports", "Cooking", "Hiking"]
 //Make a copy of an array
 const copiedArray = [...hobbies];
 
+const person = {
+    firstName: "Max",
+    age: 30
+};
+
 const add = (...number: number[]) => { // rest operator number[] is an array which the add
     return number.reduce((curResult, curValue) => {
         return curResult + curValue;
@@ -39,3 +44,16 @@ const add = (...number: number[]) => { // rest operator number[] is an array whi
 
 const addNumbers = add(5, 10, 2, 3.7);
 console.log(addNumbers);
+
+//array and object destructuring
+// usually use in react
+// const hobby1 = hobbies[0];
+// const hobby2 = hobbies[1];
+
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+
+console.log(hobbies, hobby1, hobby2);// ["Sports", "Cooking", "Hiking"] Sports Cooking
+
+const { firstName, age } = person;
+
+console.log(firstName, age); // Max 30
